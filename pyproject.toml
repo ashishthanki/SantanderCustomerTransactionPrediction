@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "Santander Customer Transaction Prediction"
+version = "0.1.0"
+description = "This is personal project where I work on a Machine learning model that works on a Santander Customer Transaction Prediction."
+authors = ["Ashish Thanki <ashishthanki95@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.1.0"
+pandas = "^2.2.2"
+scikit-learn = "^1.5.1"
+jupyterlab = "^4.2.4"
+seaborn = "^0.13.2"
+matplotlib = "^3.9.2"
+kaggle = "^1.6.17"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
