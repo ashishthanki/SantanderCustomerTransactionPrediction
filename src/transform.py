@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 def transform_data(data: pd.DataFrame) -> pd.DataFrame:
     logger.info("Transforming data")
-    data
+    data = data.drop(columns=["ID_code"])
     logger.info("Transformed data successfully.")
     return data
 
@@ -24,7 +24,7 @@ def split_data(
     X_train, X_test_val, y_train, y_test_val = train_test_split(
         X, y, random_state=42, test_size=0.4
     )
-    X_test, y_test, X_val, y_val = train_test_split(
+    X_test, X_val, y_test, y_val = train_test_split(
         X_test_val, y_test_val, random_state=42, test_size=0.5
     )
     logger.debug("Split data into train, test and validation sets.")
